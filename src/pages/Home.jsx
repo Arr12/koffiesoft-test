@@ -44,17 +44,17 @@ export default function Home() {
         {/* Hero Section */}
         <section
             className={`relative bg-cover bg-center bg-no-repeat text-white py-20 px-5 text-center`}
-            style={{ backgroundImage: `url('http://localhost:8000/storage/${hero?.length > 0 ? hero[0]?.thumbnail : ''}')` }}
+            style={{ backgroundImage: `url('${hero?.length > 0 ? `http://localhost:8000/storage/${hero[0]?.thumbnail}` : '/images/restaurant-1.jpg'}')` }}
         >
             <div className="max-w-3xl mx-auto">
                 <h1 className="text-5xl font-bold mb-4">
-                    {hero?.length > 0 ? hero[0]?.name : ''}
+                    {hero?.length > 0 ? hero[0]?.name : 'Culinary Experience Like No Other'}
                 </h1>
                 <p className="text-lg opacity-80">
-                    {hero?.length > 0 ? hero[0]?.description : ''}
+                    {hero?.length > 0 ? hero[0]?.description : 'Indulge in exquisite flavors, crafted with passion and served with perfection.'}
                 </p>
                 <button className="mt-6 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200">
-                    {hero?.length > 0 ? hero[0]?.button_text : ''}
+                    {hero?.length > 0 ? hero[0]?.button_text : 'Get Started'}
                 </button>
             </div>
         </section>
